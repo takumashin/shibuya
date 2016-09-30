@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="http://127.0.0.1:3000/stylesheets/material.min.css">
+    <link rel="stylesheet" href="http://127.0.0.1:3000/stylesheets/blog.css">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Blog</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="/">Home</a>
+                <% if (user) { %>
+                    <a class="mdl-navigation__link" href="/post">Post</a>
+                    <a class="mdl-navigation__link" href="/logout">Logout</a>
+                <% } else { %>
+                    <a class="mdl-navigation__link" href="/login">Login</a>
+                    <a class="mdl-navigation__link" href="/reg">Register</a>
+                <% } %>
+            </nav>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
