@@ -132,7 +132,7 @@ router.get('/post', function (req, res) {
 router.post('/post', checkLogin);
 router.post('/post', function (req, res) {
     var currentUser = req.session.user,
-        post = new Post(currentUser.name, req.body.title, req.body.post);
+        post = new Post(currentUser.name, req.body.title, req.body.post, req.body.image);
     post.save(function (err) {
         if (err) {
             req.flash('error', err);
